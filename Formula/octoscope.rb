@@ -5,21 +5,21 @@
 class Octoscope < Formula
   desc "Terminal dashboard for your GitHub account"
   homepage "https://github.com/gfazioli/octoscope"
-  version "0.5.1"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gfazioli/octoscope/releases/download/v0.5.1/octoscope_0.5.1_macOS_x86_64.tar.gz"
-      sha256 "cdc90a3ebfd646c51060d7d5ceead6b92827e46b8c675b547648812dbc78de1d"
+      url "https://github.com/gfazioli/octoscope/releases/download/v0.6.0/octoscope_0.6.0_macOS_x86_64.tar.gz"
+      sha256 "821300809aff6e73defce9970396f0fd5f88b0feb34a97eb033f2f9525c8dd72"
 
       define_method(:install) do
         bin.install "octoscope"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gfazioli/octoscope/releases/download/v0.5.1/octoscope_0.5.1_macOS_arm64.tar.gz"
-      sha256 "792b6a2ce17d829cf5322c7585566875cb59f57fcdb9c5cf1dbf7623d4bea670"
+      url "https://github.com/gfazioli/octoscope/releases/download/v0.6.0/octoscope_0.6.0_macOS_arm64.tar.gz"
+      sha256 "5df1b0addf69643e35188a9aa636a16e450e347e5b5e68877394336f25f7c4e6"
 
       define_method(:install) do
         bin.install "octoscope"
@@ -29,15 +29,15 @@ class Octoscope < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gfazioli/octoscope/releases/download/v0.5.1/octoscope_0.5.1_Linux_x86_64.tar.gz"
-      sha256 "22673a4ef88f18fe78bf85a946df80c6f8761ff3acfc60095d23d11bd5661b0b"
+      url "https://github.com/gfazioli/octoscope/releases/download/v0.6.0/octoscope_0.6.0_Linux_x86_64.tar.gz"
+      sha256 "9e785569cbf654b9562a63180064d2900765a788ed0fba24e808fcaa2d5a5f6e"
       define_method(:install) do
         bin.install "octoscope"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gfazioli/octoscope/releases/download/v0.5.1/octoscope_0.5.1_Linux_arm64.tar.gz"
-      sha256 "39951de27301056125d9ce8607f3162c7dfd5f18bc427936845498846e6d3af9"
+      url "https://github.com/gfazioli/octoscope/releases/download/v0.6.0/octoscope_0.6.0_Linux_arm64.tar.gz"
+      sha256 "cb30b8d82aea7744f4358937edffa384da040694ad4c50fc3115ae6185d8981d"
       define_method(:install) do
         bin.install "octoscope"
       end
