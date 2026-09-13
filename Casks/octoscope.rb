@@ -4,25 +4,25 @@ cask "octoscope" do
     depends_on formula: "terminal-notifier"
   end
 
-  version "0.34.0"
+  version "0.34.1"
 
   on_macos do
     on_arm do
-      sha256 "42ed78684d308fde60687274fdeef20dcf1dd69f0113c37d685e9e9d72cc201b"
+      sha256 "8a1e18c5b45601a1464f29a1b2c906f4d0903974435de5d31d177b37d6f3b167"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_macOS_arm64.tar.gz"
     end
     on_intel do
-      sha256 "582c03dd776e0f25ca77000ad9843795735bbc4ccc9f8c947149b115de957df1"
+      sha256 "66f0dda1186a4aa860ddd9aa3140f7b9410e1e50ed4b70e5f7b48c34e01b7ad7"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_macOS_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "858adefd11c4a42df593a423dc8a36ed016451eb3d40b0bfa865de0bde97d4de"
+      sha256 "6e77b2b55a0791a27b9c9f6e668d8dd87770b1c40346c7a627da9e4173d409af"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "89935305a08c50b597860fd281ddaf1628d36bafe05ab622468070cb066e2ce8"
+      sha256 "71491fc66f1c499f61fef709cd19a9fed39862ca105b5dad0d2b809d82bb1245"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_Linux_x86_64.tar.gz"
     end
   end
@@ -36,6 +36,13 @@ cask "octoscope" do
   end
 
   binary "octoscope"
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr",
+                     args: ["-dr", "com.apple.quarantine", "#{staged_path}/octoscope"]
+    end
+  end
 
   # No zap stanza required
 end
