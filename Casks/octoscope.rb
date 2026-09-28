@@ -12,25 +12,25 @@ cask "octoscope" do
     end
   end
 
-  version "0.35.0"
+  version "0.36.0"
 
   on_macos do
     on_arm do
-      sha256 "20f0f77005d35fc9b5346397d3d0eea91a17485c03544cfaaf50359c0d5ca9cf"
+      sha256 "ab51649df2e57740f7be00f8f050d033594812ef0d68e8d8ae4187194828b8fa"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_macOS_arm64.tar.gz"
     end
     on_intel do
-      sha256 "9374229c8761642bfd924a814fd7d643b13851132127c357ecf9ec40156e1073"
+      sha256 "387d63206d539df8a027d7ec6bf7d6de3db955a6ba9e21829cf76a4e663b2d62"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_macOS_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "1c17bd430f90898f9acd05f5bcf61d897e5b06c74171a6bc405cd3302561e89b"
+      sha256 "84976dfed671ad2c1b1026470ef47acf915c7c8282ec2d4973a4b0ee665727ab"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "b41fc923552285b51ffb7a837faef91840367276db6910e182a055ca01cb7a96"
+      sha256 "2f1de51deeecd8743174600e0bd58a20b865291eabced8330e43c3fade077e72"
       url "https://github.com/gfazioli/octoscope/releases/download/v#{version}/octoscope_#{version}_Linux_x86_64.tar.gz"
     end
   end
